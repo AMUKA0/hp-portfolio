@@ -1,15 +1,15 @@
 const qualifications = [
   {
-    title: "B.S. in Computer Science",
-    details: "Strong foundation in algorithms, systems, and software design.",
+    title: "Computer Science Education",
+    details: "Foundation in data structures, algorithms, and software architecture.",
   },
   {
-    title: "Cloud and Data Engineering Certifications",
-    details: "Hands-on capability with cloud infrastructure and data platforms.",
+    title: "Hands-on Full-Stack Practice",
+    details: "Built and iterated on real projects using modern frontend and backend tooling.",
   },
   {
-    title: "Agile Product Delivery Experience",
-    details: "Experienced in iterative delivery, planning, and stakeholder alignment.",
+    title: "Data Platform Readiness",
+    details: "Prepared for Snowflake-based integrations and production-oriented API workflows.",
   },
 ];
 
@@ -17,9 +17,9 @@ export default function QualificationsPage() {
   return (
     <section className="space-y-8">
       <header className="space-y-4">
-        <p className="text-sm uppercase tracking-[0.2em] text-slate-400">Qualifications</p>
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Education and credentials
+        <p className="text-sm uppercase tracking-[0.2em] text-slate-600">Qualifications</p>
+        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          Education and credibility markers
         </h2>
       </header>
 
@@ -27,10 +27,10 @@ export default function QualificationsPage() {
         {qualifications.map((qualification) => (
           <article
             key={qualification.title}
-            className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5"
+            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
           >
-            <h3 className="text-lg font-semibold text-white">{qualification.title}</h3>
-            <p className="mt-3 text-slate-300">{qualification.details}</p>
+            <h3 className="text-lg font-semibold text-slate-900">{qualification.title}</h3>
+            <p className="mt-3 text-slate-700">{qualification.details}</p>
           </article>
         ))}
       </div>
