@@ -1,7 +1,7 @@
 export const profile = {
   name: "Hector Pearson",
   role: "BSc Computer Science Student",
-  focus: "Cyber Security and Data Science Placements",
+  focus: "Cyber Security, Software Development, Data Science Placements",
   email: "hector.pearson645@gmail.com",
   phone: "07850586111",
   location: "Norwich / Manchester",

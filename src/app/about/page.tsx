@@ -1,35 +1,162 @@
 import { profile } from "@/lib/profile";
+import { Reveal } from "@/components/reveal";
 
-const strengths = [
-  "Production data pipeline delivery with Snowflake, dbt Cloud, and Apache Airflow.",
-  "Cross-functional collaboration with business stakeholders to translate analytics requirements into engineering solutions.",
-  "Early career experience across cyber security, software development, cloud, and big data problem solving.",
+const summaryPoints = [
+  "First-year Computer Science (BSc) student at the University of Manchester with practical engineering experience.",
+  "Built production-oriented data workflows using Snowflake, dbt Cloud, and Apache Airflow.",
+  "Collaborated in team hackathon and work-placement environments across data, software, and cyber-focused contexts.",
+];
+
+const capabilityGroups = [
+  {
+    title: "Data Engineering",
+    items: [
+      "Snowflake schema and staging design",
+      "SQL transformation pipelines",
+      "Data quality and governance checks",
+    ],
+  },
+  {
+    title: "Software Development",
+    items: [
+      "Full-stack web delivery with Next.js and React",
+      "API integration and backend coordination",
+      "Collaborative Git-based development workflows",
+    ],
+  },
+  {
+    title: "Cyber and Cloud Exposure",
+    items: [
+      "Cyber-security concepts through structured placement work",
+      "Cloud and DevOps tooling familiarity",
+      "Secure data-access and credential handling awareness",
+    ],
+  },
+];
+
+const workingStyle = [
+  {
+    step: "Understand",
+    details:
+      "Clarify user and stakeholder needs before implementing solutions.",
+  },
+  {
+    step: "Build",
+    details:
+      "Develop iteratively with maintainable code and clear handoffs between frontend, backend, and data.",
+  },
+  {
+    step: "Validate",
+    details:
+      "Check outcomes against reliability, usability, and measurable impact.",
+  },
+];
+
+const interests = ["Cyber Security", "Software Development", "Data Science"];
+const placementFocus = [
+  {
+    track: "Cyber Security",
+    fit: "Security-aware engineering, authentication flow awareness, and secure data handling.",
+  },
+  {
+    track: "Software Development",
+    fit: "Full-stack delivery across frontend, backend, and integration layers.",
+  },
+  {
+    track: "Data Science",
+    fit: "Data pipeline foundations and analytics-oriented product thinking.",
+  },
 ];
 
 export default function AboutPage() {
   return (
-    <section className="space-y-8">
-      <header className="space-y-4">
-        <p className="text-sm uppercase tracking-[0.2em] text-slate-600">About</p>
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-          {profile.name}
-        </h2>
-        <p className="max-w-3xl text-lg leading-8 text-slate-700">
-          I am a first year student at the University of Manchester studying
-          Computer Science (BSc). I have a long-standing interest in technology
-          and I am currently exploring summer placements focused on cyber
-          security and data science.
-        </p>
-      </header>
+    <section className="space-y-12">
+      <Reveal>
+        <header className="space-y-4">
+          <p className="section-kicker">About</p>
+          <h2 className="section-title">{profile.name}</h2>
+          <p className="section-copy text-lg">
+            I am building toward software engineering roles where I can combine
+            strong technical fundamentals with practical product delivery. I am
+            currently looking for placements in cyber security, software
+            development, and data science.
+          </p>
+        </header>
+      </Reveal>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-xl font-semibold text-slate-900">Professional Summary</h3>
-        <ul className="mt-4 grid gap-3 text-slate-700">
-          {strengths.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+      <Reveal delayMs={100}>
+        <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+          <div className="surface-card rounded-2xl p-6">
+            <h3 className="text-xl font-semibold text-slate-900">Professional Summary</h3>
+            <ul className="mt-4 grid gap-3 text-slate-700">
+              {summaryPoints.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <div className="mt-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
+                Looking For
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {interests.map((item) => (
+                  <span
+                    key={item}
+                    className="accent-chip rounded-full px-3 py-1 text-xs font-semibold"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <aside className="surface-card rounded-2xl p-6">
+            <h3 className="text-lg font-semibold text-slate-900">Placement Focus</h3>
+            <p className="mt-2 text-sm text-slate-700">
+              Role areas I am actively targeting and how my current skillset aligns.
+            </p>
+            <div className="mt-4 space-y-3">
+              {placementFocus.map((item) => (
+                <article key={item.track} className="rounded-xl border border-slate-200 bg-white p-4">
+                  <p className="text-sm font-semibold text-slate-900">{item.track}</p>
+                  <p className="mt-1 text-sm text-slate-700">{item.fit}</p>
+                </article>
+              ))}
+            </div>
+          </aside>
+        </div>
+      </Reveal>
+
+      <div className="grid gap-4 md:grid-cols-3">
+        {capabilityGroups.map((group, idx) => (
+          <Reveal key={group.title} delayMs={150 + idx * 70}>
+            <article className="surface-card rounded-2xl p-5">
+              <h3 className="text-lg font-semibold text-slate-900">{group.title}</h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </Reveal>
+        ))}
       </div>
+
+      <Reveal delayMs={280}>
+        <article className="surface-card rounded-2xl p-6">
+          <h3 className="text-xl font-semibold text-slate-900">How I Work</h3>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            {workingStyle.map((item) => (
+              <div key={item.step} className="rounded-xl border border-slate-200 bg-white p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sky-700">
+                  {item.step}
+                </p>
+                <p className="mt-2 text-sm text-slate-700">{item.details}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      </Reveal>
     </section>
   );
 }

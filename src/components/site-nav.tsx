@@ -6,6 +6,7 @@ import { profile } from "@/lib/profile";
 
 const navigation = [
   { href: "/", label: "Home" },
+  { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
   { href: "/skills", label: "Skills" },
@@ -25,10 +26,10 @@ export function SiteNav() {
           <TransitionLink
             key={item.href}
             href={item.href}
-            className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+            className={`interactive-button rounded-full border px-4 py-2 text-sm font-semibold ${
               isActive
-                ? "border-slate-900 bg-slate-900 text-white"
-                : "border-slate-300 bg-white text-slate-700 hover:border-sky-500 hover:text-sky-700"
+                ? "border-sky-800 bg-sky-800 text-white shadow-[0_6px_16px_rgba(3,105,161,0.28)]"
+                : "border-slate-300 bg-white text-slate-700 hover:border-sky-500 hover:bg-sky-50 hover:text-sky-800"
             }`}
           >
             {item.label}
@@ -39,7 +40,7 @@ export function SiteNav() {
       <a
         href={profile.resumeFile}
         download
-        className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-sky-500 hover:text-sky-700"
+        className="interactive-button rounded-full border border-sky-700 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-900 hover:border-sky-600 hover:bg-sky-100"
       >
         Resume
       </a>
