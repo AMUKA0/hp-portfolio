@@ -1,3 +1,5 @@
+import { profile } from "@/lib/profile";
+
 export default function ContactPage() {
   return (
     <section className="space-y-8">
@@ -7,8 +9,8 @@ export default function ContactPage() {
           Recruiter and hiring manager contact
         </h2>
         <p className="max-w-3xl text-lg leading-8 text-slate-700">
-          Use this page as a quick handoff point for interviews, follow-ups,
-          and portfolio review requests.
+          Open to summer technology placements with a focus on cyber security
+          and data science.
         </p>
       </header>
 
@@ -16,25 +18,30 @@ export default function ContactPage() {
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-semibold text-slate-900">Direct channels</h3>
           <ul className="mt-4 space-y-2 text-slate-700">
-            <li>Email: your.email@example.com</li>
-            <li>LinkedIn: linkedin.com/in/your-profile</li>
-            <li>GitHub: github.com/your-handle</li>
-            <li>Location: United States</li>
+            <li>
+              Email: <a className="hover:text-sky-700" href={`mailto:${profile.email}`}>{profile.email}</a>
+            </li>
+            <li>
+              Phone: <a className="hover:text-sky-700" href={`tel:${profile.phone}`}>{profile.phone}</a>
+            </li>
+            <li>
+              LinkedIn: <a className="hover:text-sky-700" href={profile.linkedin} target="_blank" rel="noopener noreferrer">{profile.linkedin.replace("https://", "")}</a>
+            </li>
+            <li>Location: {profile.location}</li>
           </ul>
         </article>
 
         <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-semibold text-slate-900">Resume</h3>
           <p className="mt-3 text-slate-700">
-            Download the current placeholder resume link. Replace this file with
-            your production resume before sharing broadly.
+            Download my latest CV.
           </p>
           <a
-            href="/resume-dummy.txt"
+            href={profile.resumeFile}
             download
             className="mt-4 inline-flex rounded-full bg-slate-900 px-5 py-2 text-sm font-medium text-white transition hover:bg-slate-700"
           >
-            Download Resume (Dummy)
+            Download Hector-Pearson-CV.pdf
           </a>
         </article>
       </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteNav } from "@/components/site-nav";
+import { profile } from "@/lib/profile";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Harry Porter | Developer Portfolio",
+  title: `${profile.name} | Developer Portfolio`,
   description:
     "Professional student developer portfolio showcasing projects, process, skills, and measurable impact.",
 };
@@ -39,10 +40,10 @@ export default function RootLayout({
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div className="space-y-2">
                   <p className="text-xs uppercase tracking-[0.3em] text-slate-600">
-                    Harry Porter
+                    {profile.name}
                   </p>
                   <h1 className="text-2xl font-semibold tracking-tight text-slate-900">
-                    Student Software Developer Portfolio
+                    {profile.role} Portfolio
                   </h1>
                   <p className="max-w-2xl text-sm text-slate-600">
                     Built to support job applications with clear project evidence,
@@ -58,11 +59,11 @@ export default function RootLayout({
             <footer className="mt-16 flex flex-col gap-2 border-t border-slate-200 pt-6 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
               <p>Built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4.</p>
               <a
-                href="/resume-dummy.txt"
+                href={profile.resumeFile}
                 download
                 className="font-medium text-slate-900 underline underline-offset-4 transition hover:text-sky-700"
               >
-                Download Resume (Dummy)
+                Download Resume (PDF)
               </a>
             </footer>
           </div>

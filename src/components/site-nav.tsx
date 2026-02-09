@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { TransitionLink } from "@/components/transition-link";
+import { profile } from "@/lib/profile";
 
 const navigation = [
   { href: "/", label: "Home" },
@@ -36,7 +37,7 @@ export function SiteNav() {
       })}
 
       <a
-        href="/resume-dummy.txt"
+        href={profile.resumeFile}
         download
         className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-sky-500 hover:text-sky-700"
       >

@@ -1,15 +1,15 @@
 const skillGroups = [
   {
-    title: "Frontend",
-    items: ["Next.js App Router", "React 19", "TypeScript", "Tailwind CSS v4"],
+    title: "Programming",
+    items: ["Python", "C++", "JavaScript", "SQL", "Bash"],
   },
   {
-    title: "Backend and Data",
-    items: ["REST API integration", "Node.js", "SQL fundamentals", "Snowflake-ready design"],
+    title: "Data and Cloud",
+    items: ["Snowflake", "Apache Airflow", "dbt Cloud", "Azure DevOps"],
   },
   {
-    title: "Engineering Practices",
-    items: ["Git workflow", "ESLint", "Component architecture", "Technical documentation"],
+    title: "Engineering Workflow",
+    items: ["Git", "CI/CD", "Data Pipeline Development", "Data Quality Automation"],
   },
 ];
 
@@ -19,11 +19,11 @@ export default function SkillsPage() {
       <header className="space-y-4">
         <p className="text-sm uppercase tracking-[0.2em] text-slate-600">Skills</p>
         <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-          Technical toolkit
+          Technical skills from CV
         </h2>
         <p className="max-w-3xl text-lg leading-8 text-slate-700">
-          Skills are organized for quick recruiter review and aligned to how I build,
-          integrate, and ship software.
+          Core technologies and engineering practices used in work placements
+          and project delivery.
         </p>
       </header>
 
