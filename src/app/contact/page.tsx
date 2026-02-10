@@ -27,9 +27,6 @@ export default function ContactPage() {
                 Email: <a className="interactive-link hover:text-sky-700" href={`mailto:${profile.email}`}>{profile.email}</a>
               </li>
               <li>
-                Phone: <a className="interactive-link hover:text-sky-700" href={`tel:${profile.phone}`}>{profile.phone}</a>
-              </li>
-              <li>
                 LinkedIn: <a className="interactive-link hover:text-sky-700" href={profile.linkedin} target="_blank" rel="noopener noreferrer">{profile.linkedin.replace("https://", "")}</a>
               </li>
               <li>Location: {profile.location}</li>

@@ -29,6 +29,7 @@ const engineeringDisplay = [
   "pipeline.health = stable",
   "deployment.mode = iterative",
   "data.quality_checks = automated",
+  "market_data = cURLed",
   "focus.domains = [cyber, software, data]",
 ];
 
