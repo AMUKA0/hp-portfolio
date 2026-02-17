@@ -12,8 +12,8 @@ export default function ContactPage() {
             Recruiter and hiring manager contact
           </h2>
           <p className="section-copy text-lg">
-            Open to summer placements across cyber security, software
-            development, and data science.
+            Open to summer placements across data science, quant roles, and
+            cyber security.
           </p>
         </header>
       </Reveal>
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 Recruiter Notes
               </p>
               <ul className="mt-2 space-y-1 text-sm text-slate-700">
-                <li>Preferred opportunities: Cyber Security, Software Development, Data Science</li>
+                <li>Preferred opportunities: Data Science, Quant Roles, Cyber Security</li>
                 <li>Typical response time: within 48 hours</li>
                 <li>Resume and profile links are available directly on this site</li>
               </ul>

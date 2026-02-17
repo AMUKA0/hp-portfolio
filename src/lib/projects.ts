@@ -28,6 +28,27 @@ export const projectTemplate: ProjectEntry = {
 
 export const projects: ProjectEntry[] = [
   {
+    slug: "marketpipe",
+    title: "marketpipe",
+    summary:
+      "A Bash-first financial data pipeline and command-line analytics tool for Linux that ingests market data, computes indicators, generates signals, runs backtests, and renders historical/live dashboards.",
+    problem:
+      "Trading and market-monitoring workflows often rely on heavyweight runtimes and fragmented tooling, making deterministic CLI-based analysis difficult in constrained environments.",
+    approach:
+      "Implemented a GNU Bash-only, config-driven pipeline with strict mode and function-only modules under lib/. The flow covers watchlist ingestion, raw fetch, normalization, indicator computation, signal generation, backtesting, and dashboard rendering, with ISO-timestamped structured logging, per-symbol fault isolation, and offline-safe tests using mocked stream providers.",
+    impact:
+      "Delivered a maintainable and observable CLI architecture for end-to-end financial data analysis with deterministic outputs and resilient operation under partial-failure conditions.",
+    stack: [
+      "GNU Bash",
+      "Linux CLI",
+      "CSV Data Pipelines",
+      "Structured Logging",
+      "Backtesting",
+      "Technical Indicators",
+    ],
+    githubUrl: "https://github.com/AMUKA0/marketpipe",
+  },
+  {
     slug: "housrwrlds",
     title: "HousrWrlds",
     summary:

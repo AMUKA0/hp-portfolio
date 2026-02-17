@@ -2,6 +2,17 @@ import { Reveal } from "@/components/reveal";
 
 const experiences = [
   {
+    title: "Computer Science Department Leadership Student Representative",
+    organization: "The University of Manchester",
+    period: "11/2025 - Present",
+    location: "Manchester, England, United Kingdom",
+    stack: "Student Leadership, Communication, Stakeholder Management",
+    points: [
+      "Volunteering as an undergraduate student representative in the Department Leadership Committee.",
+      "Identifying student queries, questions, and suggestions and presenting them to department leadership in meetings.",
+    ],
+  },
+  {
     title: "Data Engineer",
     organization: "Aviva",
     period: "06/2025 - 09/2025",

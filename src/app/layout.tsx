@@ -48,8 +48,8 @@ export default function RootLayout({
                     {profile.role} Portfolio
                   </h1>
                   <p className="max-w-2xl text-sm text-slate-700">
-                    Built to support job applications with clear project evidence,
-                    technical depth, and recruiter-friendly navigation.
+                    A concise portfolio showcasing my experience, technical skills,
+                    and project work.
                   </p>
                 </div>
                 <SiteNav />

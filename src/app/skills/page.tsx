@@ -30,7 +30,7 @@ const engineeringDisplay = [
   "deployment.mode = iterative",
   "data.quality_checks = automated",
   "market_data = cURLed",
-  "focus.domains = [cyber, software, data]",
+  "focus.domains = [data_science, quant, cyber]",
 ];
 
 export default function SkillsPage() {
@@ -44,7 +44,8 @@ export default function SkillsPage() {
           </h2>
           <p className="section-copy text-lg">
             Core technologies and engineering practices used in work placements
-            and project delivery.
+            and project delivery, aligned to data science, quant roles, and
+            cyber security pathways.
           </p>
         </header>
       </Reveal>

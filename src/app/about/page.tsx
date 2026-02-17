@@ -4,12 +4,12 @@ import { Reveal } from "@/components/reveal";
 const summaryPoints = [
   "First-year Computer Science (BSc) student at the University of Manchester with practical engineering experience.",
   "Built production-oriented data workflows using Snowflake, dbt Cloud, and Apache Airflow.",
-  "Collaborated in team hackathon and work-placement environments across data, software, and cyber-focused contexts.",
+  "Collaborated in team hackathon and work-placement environments across data science, quant-oriented tooling, and cyber-focused contexts.",
 ];
 
 const capabilityGroups = [
   {
-    title: "Data Engineering",
+    title: "Data Science Foundations",
     items: [
       "Snowflake schema and staging design",
       "SQL transformation pipelines",
@@ -17,11 +17,11 @@ const capabilityGroups = [
     ],
   },
   {
-    title: "Software Development",
+    title: "Quant Role Alignment",
     items: [
-      "Full-stack web delivery with Next.js and React",
-      "API integration and backend coordination",
-      "Collaborative Git-based development workflows",
+      "CLI/data tooling design for deterministic outputs",
+      "Signal and indicator-oriented workflow thinking",
+      "Automation-first engineering approach",
     ],
   },
   {
@@ -52,19 +52,19 @@ const workingStyle = [
   },
 ];
 
-const interests = ["Cyber Security", "Software Development", "Data Science"];
+const interests = ["Data Science", "Quant Roles", "Cyber Security"];
 const placementFocus = [
+  {
+    track: "Data Science",
+    fit: "Data pipeline foundations, analytics workflows, and insight-driven engineering.",
+  },
+  {
+    track: "Quant Roles",
+    fit: "Quant development and analysis pathway through market-style data tooling and strategy logic.",
+  },
   {
     track: "Cyber Security",
     fit: "Security-aware engineering, authentication flow awareness, and secure data handling.",
-  },
-  {
-    track: "Software Development",
-    fit: "Full-stack delivery across frontend, backend, and integration layers.",
-  },
-  {
-    track: "Data Science",
-    fit: "Data pipeline foundations and analytics-oriented product thinking.",
   },
 ];
 
@@ -76,10 +76,9 @@ export default function AboutPage() {
           <p className="section-kicker">About</p>
           <h2 className="section-title">{profile.name}</h2>
           <p className="section-copy text-lg">
-            I am building toward software engineering roles where I can combine
-            strong technical fundamentals with practical product delivery. I am
-            currently looking for placements in cyber security, software
-            development, and data science.
+            I am building toward roles where I can combine strong engineering
+            fundamentals with analytical problem solving. I am currently looking
+            for placements in data science, quant roles, and cyber security.
           </p>
         </header>
       </Reveal>

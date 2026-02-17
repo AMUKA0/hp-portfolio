@@ -27,7 +27,7 @@ const qualifications = [
   },
 ];
 
-const focusTracks = ["Cyber Security", "Software Development", "Data Science"];
+const focusTracks = ["Data Science", "Quant Roles", "Cyber Security"];
 
 export default function QualificationsPage() {
   return (

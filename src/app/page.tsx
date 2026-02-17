@@ -4,19 +4,19 @@ import { profile } from "@/lib/profile";
 
 const highlights = [
   {
-    title: "Data Engineering",
+    title: "Data Science Pipeline Work",
     description:
-      "Built and maintained production pipelines with Snowflake, dbt Cloud, and Apache Airflow.",
+      "Built and maintained production data pipelines with Snowflake, dbt Cloud, and Apache Airflow for analytics-ready outputs.",
   },
   {
-    title: "Software Delivery",
+    title: "Quant-Oriented Engineering",
     description:
-      "Worked in collaborative development environments using Git, Java, C#, and CI tooling.",
+      "Developed tools and workflows aligned with quant development and quant analysis pathways.",
   },
   {
-    title: "Technology Breadth",
+    title: "Cyber Security Exposure",
     description:
-      "Experience across cyber security, cloud, software engineering, and big data work placements.",
+      "Gained practical cyber-security and cloud exposure through structured placements and team projects.",
   },
   {
     title: "Award",
@@ -54,7 +54,7 @@ export default function Home() {
             <p className="section-copy text-lg">
               First year Computer Science student at the University of Manchester
               with hands-on data engineering experience and technology placements
-              across cyber security, cloud, and software development.
+              across data science, quant-oriented development, and cyber security.
             </p>
             <div className="flex flex-wrap gap-3">
               <TransitionLink
